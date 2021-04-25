@@ -8,9 +8,9 @@ mongoose.connect(process.env.DB, {
   useCreateIndex: true,
 });
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(process.env.PORT, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://googlebackend.netlify.app/",
     methods: ["GET", "POST"],
   },
 });
